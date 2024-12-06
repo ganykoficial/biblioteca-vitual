@@ -1,0 +1,124 @@
+.cabecalho{
+    background-color: var(--cor-dos-itens);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.container_botao{
+    display: none;
+}
+
+.container_botao:checked ~ .lista_menu{
+    display: block;
+}
+
+.cabecalho_menu_hamburguer{
+    width: 42px;
+    height: 42px;
+    background-image: url('../img/Menu.svg');
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.lista_menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.lista_menu_titulo, .lista_menu_item{
+    padding: 1em;
+    background-color: var(--cor-dos-itens);
+}
+
+.lista_menu_titulo{
+    color: var(--cor-laranja);
+    font-weight: 700;
+}
+
+.lista_menu_link{
+    color: var(--cor-azul);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.container_imagem{
+    padding: 0.4em;
+}
+
+.container_titulo{
+    display: none;
+}
+
+.opcoes{
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .cabecalho{
+        padding: 0 3em;
+    }
+
+    .container_titulo{
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+        font-weight: 400;
+        color: black;
+        display: block;
+    }
+    
+    .container_titulo_negrito{
+        font-weight: 700;
+    }
+
+    .opcoes{
+        display: flex;
+    }
+
+    .opcoes_itens{
+        color: var(--cor-azul);
+        padding: 0 1em;
+    }
+
+    .opcoes_link{
+        text-decoration: none;
+        color: var(--cor-azul);
+    }
+
+    .container_imagem_transparente{
+        display: none;
+    }
+
+    .cabecalho_menu_hamburguer{
+        display: none;
+    }
+
+    .opcoes_botao{
+        display: none;
+    }
+
+    .opcoes_botao:checked ~ .lista_menu{
+        display: block;
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 1728px){
+    .container_texto{
+        color: var(--cor-azul);
+        font-size: 20px;
+    }
+
+    .container_imagem{
+        margin-left: 2.5em;
+    }
+}
